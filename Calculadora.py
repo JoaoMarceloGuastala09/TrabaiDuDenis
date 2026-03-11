@@ -1,0 +1,32 @@
+#Minha versão
+conta = input("Digite uma expressão: ")
+resultado = eval(conta)
+print(f"O resultado de {conta} é {resultado}.")
+
+#Versão Denis | Calculadora de Aprovação Escolar
+
+nome = input("Digite o nome do estudante: ")
+
+soma_notas = 0
+quantidade_trimestres = 3
+meta_aprovacao = 180
+
+#Coleta as notas dos três períodos
+
+for i in range(1, quantidade_trimestres + 1):
+    nota = float(input(f"Informe a nota {i}º período: "))
+    soma_notas += nota
+
+print("-=" * 15)
+print(f"Estudante: {nome}")
+print(f"Pontuação Total: {soma_notas}")
+
+#Verifica estado de aprovação
+
+if soma_notas >= meta_aprovacao:
+    print("Status: Aprovado | Parabens")
+
+else:
+    pontos_faltantes = meta_aprovacao - soma_notas
+    print(f"Status: Desaprovado | Você precissa de {pontos_faltantes} pontos para passar.")
+
